@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amith Kurian Joseph - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            perspective: 1000px;
+        }
+        .menu {
+            text-align: center;
+        }
+        .menu button {
+            background: linear-gradient(145deg, #6bdb69, #4CAF50);
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin: 1rem;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .menu button:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .section {
+            display: none;
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .section h2 {
+            display: flex;
+            align-items: center;
+        }
+        .section h2::before {
+            content: '\1F4C4'; /* Default symbol for sections */
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            color: #4CAF50;
+        }
+        #about h2::before {
+            content: '\1F464'; /* Person symbol */
+        }
+        #skills h2::before {
+            content: '\2699'; /* Gear symbol */
+        }
+        #projects h2::before {
+            content: '\1F4D2'; /* Notebook symbol */
+        }
+        #contact h2::before {
+            content: '\2709'; /* Envelope symbol */
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+        .contact-item span {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #4CAF50;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .nav-buttons button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        const projects = [
+            {
+                title: "Human Facial Recognition System",
+                description: "A deep learning-based facial recognition system for secure identity verification. Developed using TensorFlow and PyTorch, this project leverages CNNs to achieve high accuracy in recognizing faces.",
+                github: "https://github.com/kur1an/Human-Facial-Recognition-System"
+            },
+            {
+                title: "BusT - Private & Public Bus Timing App",
+                description: "A mobile app built with Flutter and Node.js to provide accurate bus timings across Kerala. The backend is supported by MongoDB for real-time data management.",
+                github: "https://github.com/kur1an/bust_mini"
+            },
+            {
+                title: "Home Automation System",
+                description: "This project integrates voice commands to control home devices. It uses Arduino for hardware control and JavaScript for logic management, offering convenience and automation.",
+                github: "https://github.com/kur1an/Home-Automation-"
+            }
+        ];
+
+        let currentProject = 0;
+
+        function showProjectDetails(index) {
+            currentProject = index;
+            const project = projects[index];
+            const projectDetail = document.getElementById('project-detail');
+            projectDetail.innerHTML = `
+                <h2>${project.title}</h2>
+                <p>${project.description}</p>
+                <p><a href="${project.github}" target="_blank">GitHub Repository</a></p>
+                <div class="nav-buttons">
+                    <button onclick="navigateProject(-1)">Previous</button>
+                    <button onclick="navigateProject(1)">Next</button>
+                </div>
+            `;
+            showSection('project-detail');
+        }
+
+        function navigateProject(direction) {
+            currentProject = (currentProject + direction + projects.length) % projects.length;
+            showProjectDetails(currentProject);
+        }
+
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </div>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a final-year Computer Science student with a strong passion for AI, Cyber Security, and innovative project development. With hands-on experience in deep learning, ethical hacking, and application development, I am dedicated to solving real-world problems through technology.</p>
+    </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills-item">
+                <span>&#128187;</span>
+                <p>Programming Languages: Dart, Python, JavaScript, C, Java</p>
+            </div>
+            <div class="skills-item">
+                <span>&#9881;</span>
+                <p>Frameworks and Tools: TensorFlow, PyTorch, Node.js, Express.js</p>
+            </div>
+            <div class="skills-item">
+                <span>&#128451;</span>
+                <p>Database: MongoDB</p>
+            </div>
+            <div class="skills-item">
+                <span>&#128736;</span>
+                <p>Concepts: Deep Learning, Ethical Hacking, Cloud Computing</p>
+            </div>
+            <div class="skills-item">
+                <span>&#129309;</span>
+                <p>Soft Skills: Teamwork, Leadership, Problem-Solving</p>
+            </div>
+        </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li><button onclick="showProjectDetails(0)">Human Facial Recognition System</button></li>
+            <li><button onclick="showProjectDetails(1)">BusT - Private & Public Bus Timing App</button></li>
+            <li><button onclick="showProjectDetails(2)">Home Automation System</button></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-item">
+            <span>&#9993;</span>
+            <p>Email: amith.kurianj@gmail.com</p>
+        </div>
+        <div class="contact-item">
+            <span>&#9742;</span>
+            <p>Phone: 7510300688</p>
+        </div>
+        <div class="contact-item">
+            <span>&#128279;</span>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/amithkurianjoseph/" target="_blank">linkedin.com/in/amithkurianjoseph</a></p>
+        </div>
+        <div class="contact-item">
+            <span>&#128187;</span>
+            <p>GitHub: <a href="https://github.com/kur1an" target="_blank">github.com/kur1an</a></p>
+        </div>
+    </section>
+
+    <section id="project-detail" class="section">
+        <!-- Project details will be dynamically
