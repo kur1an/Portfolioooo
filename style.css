@@ -90,17 +90,17 @@ body {
 
 
 .project-cards {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 .project-card {
     background: #f9f9f9;
-    border-radius: 10px;
+    border-radius: 1px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    width: 300px;
+    padding: 0.1rem;
+    width: 250px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
