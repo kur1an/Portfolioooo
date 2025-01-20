@@ -1,3 +1,158 @@
 body {
-    background-color: brown;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px;
+}
+.menu {
+    text-align: center;
+}
+.menu button {
+    background: linear-gradient(145deg, #6bdb69, #4CAF50);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 1rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.menu button:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.section {
+    display: none;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.section h2 {
+    display: flex;
+    align-items: center;
+}
+.section h2::before {
+    content: '\1F4C4'; /* Default symbol for sections */
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #4CAF50;
+}
+#about h2::before {
+    content: '\1F464'; /* Person symbol */
+}
+#skills h2::before {
+    content: '\2699'; /* Gear symbol */
+}
+#projects h2::before {
+    content: '\1F4D2'; /* Notebook symbol */
+}
+#contact h2::before {
+    content: '\2709'; /* Envelope symbol */
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.contact-item span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #4CAF50;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.contact-item span:hover {
+    color: #2e7d32;
+}
+.skills-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.skills-item span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #4CAF50;
+}
+
+
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.project-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.project-card h3 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+.project-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.project-card a:hover {
+    background: #45a049;
+}
+.project-card img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.experience ul li {
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+.experience ul li:hover {
+    color: #2e7d32;
+    transform: scale(1.05);
+}
+.experience ul img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
