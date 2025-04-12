@@ -268,7 +268,6 @@ body {
 }
 
 
-
 /* Skills Section */
 #skills {
     background: rgba(255, 255, 255, 0.97);
@@ -310,7 +309,7 @@ body {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 1.2rem;
 }
 
@@ -349,7 +348,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
     
     .skill-item i, .skill-icon {
@@ -370,7 +369,6 @@ body {
         font-size: 0.8rem;
     }
 }
-
 /* NEW: Skills Section Enhancements */
 .skills-item {
     display: flex;
