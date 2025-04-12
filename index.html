@@ -226,6 +226,43 @@ real-time backend powered by Node.js and MongoDB.</p>
 </div>
 
                 </div>
+
+<!---Event Data Web Scraper--------->
+<div class="project-card">
+    <h3>Event Data Web Scraper</h3>
+<img src="images/web.jpg" alt="data web scrapper" width="100">
+<p>Developed a web scraper to collect structured event data from top marketing and tech conference websites.
+
+</p>
+<div class="project-links">
+<a href="https://github.com/kur1an/web_scraping/blob/main/scrape_events.py" target="_blank" class="github-link">
+    <i class="fab fa-github"></i> View on GitHub
+</a>
+<button class="view-more-btn">View More Details</button>
+</div>
+    
+<div class="project-details" style="display: none;">
+    <h4>Project Details</h4>
+
+   <p>Built a custom Python web scraper that extracts detailed information about top marketing and tech events from multiple sources including Inbound, Dreamforce, Generative AI Summit, and more. The scraper uses BeautifulSoup to parse HTML content and extract key data points like event names, dates, locations, descriptions, speakers, and agendas. The final output is structured and saved in both CSV and JSON formats for easy integration and analysis.</p>
+<h4>Technologies Used:</h4>
+<ul>
+<!-- Official Brand Icons -->
+<span class="tech-icon" title="Python"><i class="fab fa-python"></i></span>
+<span class="tech-icon" title="Web Scraping"><i class="fas fa-spider"></i></span>
+<span class="tech-icon" title="Data Parsing"><i class="fas fa-code-branch"></i></span>
+<span class="tech-icon" title="BeautifulSoup"><i class="fas fa-code"></i></span>
+<span class="tech-icon" title="Pandas"><i class="fas fa-table"></i></span>
+<span class="tech-icon" title="JSON"><i class="fas fa-brackets-curly"></i></span>
+<span class="tech-icon" title="CSV"><i class="fas fa-file-csv"></i></span>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
             <div class="project-cards">
                 <div class="project-card">
                     <h3>Human Facial Recognition System</h3>
@@ -252,9 +289,39 @@ real-time backend powered by Node.js and MongoDB.</p>
 </div>
 
                     </div>
+                </div>
 
 
 
+                <div class="project-cards">
+                    <div class="project-card">
+                        <h3>Human Facial Recognition System</h3>
+                        <img src="images/face.jpg" alt="Facial Recognition System" width="100">
+                        <p>A deep learning-based facial recognition system using TensorFlow and PyTorch.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/kur1an/Human-Facial-Recognition-System" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                            <button class="view-more-btn">View More Details</button>
+                        </div>
+                        
+                        <div class="project-details" style="display: none;">
+                            <h4>Project Details</h4>
+    
+                           <p>Designed a deep learning-based facial recognition system using TensorFlow and PyTorch to enhance identity verification
+                            systems.</p>
+    <h4>Technologies Used:</h4>
+    <ul>
+    <!-- Official Brand Icons -->
+    <span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+    <span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
+    </ul>
+    </div>
+    
+                        </div>
+                    </div>
+    
+    
 
                 <div class="project-card">
                     <h3>Home Automation System</h3>
@@ -307,9 +374,58 @@ real-time backend powered by Node.js and MongoDB.</p>
 
         <section id="hire" class="section">
             <h2>Hire Me</h2>
-            <p>I'm available for freelance work and full-time positions. Let's discuss how I can contribute to your team!</p>
-            <button onclick="showSection('contact')">Contact Me</button>
+            <div class="hire-container">
+                <div class="hire-options">
+                    <div class="hire-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Full-Time Positions</h3>
+                        <p>Looking for a dedicated team member? I'm available for full-time roles in development and cybersecurity.</p>
+                    </div>
+                    
+                    <div class="hire-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Freelance Projects</h3>
+                        <p>Need a specific project completed? I take on freelance work in web development, automation, and security.</p>
+                    </div>
+                    
+                    <div class="hire-card">
+                        <i class="fas fa-consultation"></i>
+                        <h3>Consultation</h3>
+                        <p>Need expert advice on your project? I offer consultation services for technical architecture and security.</p>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="https://drive.google.com/drive/folders/13_UyQFcmVopnGngKqG5iDLhQSCr7HOr9?usp=sharing" download class="resume-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <button onclick="showSection('contact')" class="contact-btn">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </button>
+                </div>
+                
+                <form class="contact-form" id="hire-form">
+                    <h3>Send me a direct message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </section>
+
+
     </main>
 
     <script>
@@ -402,7 +518,41 @@ function showSection(sectionId) {
             }, 50);
         }
     }
+
+
     
+    document.getElementById('hire-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Using FormSubmit.co for easy form handling
+        fetch('https://formsubmit.co/el/duxeji', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Message sent successfully!');
+            document.getElementById('hire-form').reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error sending your message.');
+        });
+    });
+
+
+
     // Handle subsection navigation
     if (sectionId === 'experience' || sectionId === 'certifications') {
         document.getElementById('about').classList.add('active');
