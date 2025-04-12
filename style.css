@@ -116,7 +116,17 @@ body {
     margin-right: 10px;
     color: #555;
 }
-
+.tech-icon img.tech-svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+  }
+  
+  .tech-icon:hover img.tech-svg {
+    filter: grayscale(0%) brightness(1.1);
+  }
 .project-links {
     display: flex;
     flex-direction: column;
@@ -150,7 +160,26 @@ body {
 .experience ul {
     padding: 0;
 }
+.experience ul li i {
+    margin-right: 10px;
+    color: #4CAF50; /* Matching your green theme */
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
 
+.experience ul li {
+    display: flex;
+    align-items: center;
+    /* Keep your existing li styles */
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 .experience ul li {
     list-style: none;
     margin: 1rem 0;
@@ -282,7 +311,7 @@ footer .social-links a:hover {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #0f0f0f;
-    text-shadow: 0 2px 4px rgba(248, 248, 248, 0.3);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 #home h2 {

@@ -30,9 +30,10 @@
         <section id="home" class="section active">
             <h1>Welcome</h1>
             <h2>Amith here!!!</h2>
-            <img src="images/face.jpg" alt="Profile Picture" width="300">
+            <img src="dp.jpg" alt="Profile Picture" width="300">
             
             <div class="home-sections-overview">
+
                 <div class="home-section-card" onclick="showSection('about')">
                     <h3>About Me</h3>
                     <p>Learn about my background, education, and professional experience...</p>
@@ -67,20 +68,18 @@
 
         <section id="about" class="section">
             <h2>About Me</h2>
-            <p>I am a final-year Computer Science student with a strong passion for AI, Cyber Security, and innovative project development. With hands-on experience in deep learning, ethical hacking, and application development, I am dedicated to solving real-world problems through technology.</p>
+            <p>I am a Computer Science student with a strong passion for AI, Cyber Security, and innovative project development. With hands-on experience in deep learning, ethical hacking, and application development, I am dedicated to solving real-world problems through technology.</p>
             <div class="experience">
                 <h3>Experience</h3>
                 <ul>
                     <li onclick="showExperience('skillcraft')">
-                        <img src="skillcraft-logo.png" alt="SkillCraft Logo">
+                        <i class="fa-solid fa-building"></i>
                         SkillCraft Technology
                     </li>
                     <li onclick="showExperience('bharatintern')">
-                        <img src="bharat-logo.png" alt="Bharat Intern Logo">
                         Bharat Intern
                     </li>
                     <li onclick="showExperience('codeway')">
-                        <img src="codeway-logo.png" alt="Codeway Logo">
                         Codeway Solutions
                     </li>
                 </ul>
@@ -114,39 +113,58 @@
 
         <section id="projects" class="section">
             <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>Automatic Live Engagement of Students During Online Meeting </h3>
+                <img src="images/engage.jpg" alt="Student Engagement Detection System" width="100">
+                <p>We are developing a real-time student engagement detection system for virtual classrooms</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-icon" title="Python"><i class="fab fa-python"></i></span>
+                    <span class="tech-icon" title="OpenCV"><i class="fas fa-eye"></i></span>
+                    <span class="tech-icon" title="TensorFlow"><i class="fas fa-brain"></i></span>
+                    <span class="tech-icon" title="Flask"><i class="fas fa-flask"></i></span>
+                </div>
+                
+                <div class="project-links">
+                    <a href="https://github.com/rogue-sys/Engagement_detection_" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <button class="view-more-btn">View More Details</button>
+                </div>
+                
+                <div class="project-details" style="display: none;">
+                    <h4>Project Details</h4>
+                    <p>This system uses computer vision and machine learning to analyze student behavior during online classes, detecting engagement levels through facial expressions, eye tracking, and interaction patterns.</p>
+                    
+                    <h4>Technologies Used:</h4>
+                    <ul>
+<!-- Official Brand Icons -->
+<span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+<span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
+<span class="tech-icon" title="React"><i class="fab fa-react"></i></span>
+<span class="tech-icon" title="HTML5"><i class="fab fa-html5"></i></span>
+<span class="tech-icon" title="CSS3"><i class="fab fa-css3-alt"></i></span>
+<span class="tech-icon" title="Python"><i class="fab fa-python"></i></span>
+<!-- Generic Icons for Other Tech -->
+<span class="tech-icon" title="TensorFlow"><i class="fas fa-project-diagram"></i></span>
+<span class="tech-icon" title="FastAPI"><i class="fas fa-bolt"></i></span>
+<span class="tech-icon" title="Socket.IO"><i class="fas fa-plug"></i></span>
+<span class="tech-icon" title="Tailwind CSS"><i class="fas fa-wind"></i></span>
+<span class="tech-icon" title="Next.js"><i class="fas fa-forward"></i></span>
+<span class="tech-icon" title="Framer Motion"><i class="fas fa-wave-square"></i></span>
+<span class="tech-icon" title="Uvicorn"><i class="fas fa-server"></i></span>
+                    </ul>
+                </div>
+            </div>
+
             <div class="project-cards">
                 <div class="project-card">
                     <h3>Human Facial Recognition System</h3>
                     <img src="images/face.jpg" alt="Facial Recognition System" width="100">
                     <p>A deep learning-based facial recognition system using TensorFlow and PyTorch.</p>
-                    <a href="https://github.com/kur1an/Human-Facial-Recognition-System" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>BusT - Private & Public Bus Timing App</h3>
-                    <img src="images/bust.jpg" alt="Bus Timing App" width="100">
-                    <p>A mobile app providing accurate bus timings across Kerala, built with Flutter and Node.js.</p>
-                    <a href="https://github.com/kur1an/bust_mini" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Home Automation System</h3>
-                    <img src="images/ardino.jpg" alt="Home Automation System" width="100">
-                    <p>An automation system integrating voice control using Arduino and JavaScript.</p>
-                    <a href="https://github.com/kur1an/Home-Automation-" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Student Engagement Detection</h3>
-                    <img src="images/engage.jpg" alt="Student Engagement Detection System" width="100">
-                    <p>We are developing a real-time student engagement detection system for virtual classrooms</p>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-icon" title="Python"><i class="fab fa-python"></i></span>
-                        <span class="tech-icon" title="OpenCV"><i class="fas fa-eye"></i></span>
-                        <span class="tech-icon" title="TensorFlow"><i class="fas fa-brain"></i></span>
-                        <span class="tech-icon" title="Flask"><i class="fas fa-flask"></i></span>
-                    </div>
-                    
                     <div class="project-links">
-                        <a href="https://github.com/kur1an" target="_blank" class="github-link">
+                        <a href="https://github.com/kur1an/Human-Facial-Recognition-System" target="_blank" class="github-link">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
                         <button class="view-more-btn">View More Details</button>
@@ -154,27 +172,70 @@
                     
                     <div class="project-details" style="display: none;">
                         <h4>Project Details</h4>
-                        <p>This system uses computer vision and machine learning to analyze student behavior during online classes, detecting engagement levels through facial expressions, eye tracking, and interaction patterns.</p>
-                        
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li>Real-time engagement scoring</li>
-                            <li>Attention span analytics</li>
-                            <li>Instructor dashboard with insights</li>
-                            <li>Customizable thresholds for different learning styles</li>
-                        </ul>
-                        
+
+                       <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
+real-time backend powered by Node.js and MongoDB.</p>
+<h4>Technologies Used:</h4>
+<ul>
+<!-- Official Brand Icons -->
+<span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+<span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
+</ul>
+</div>
+
+                    </div>
+
+                <div class="project-card">
+                    <h3>Private & Public Bus Timing App</h3>
+                    <img src="images/bust.jpg" alt="Bus Timing App" width="100">
+                    <div class="project-links">
+                        <a href="https://github.com/kur1an/bust_mini" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <button class="view-more-btn">View More Details</button>
+                    </div>
+                    
+                    <div class="project-details" style="display: none;">
+                        <h4>Project Details</h4>
+                       <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
+real-time backend powered by Node.js and MongoDB.</p>
+<h4>Technologies Used:</h4>
+<ul>
+<!-- Official Brand Icons -->
+<span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+<span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
+</ul>
+</div>
+
+                    </div>
+
+
+                <div class="project-card">
+                    <h3>Home Automation System</h3>
+                    <img src="images/ardino.jpg" alt="Home Automation System" width="100">
+                    <p>An automation system integrating voice control using Arduino and JavaScript.</p>
+               
+                <div class="project-links">
+                    <a href="https://github.com/kur1an/Home-Automation-" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <button class="view-more-btn">View More Details</button>
+                </div>
+                
+                <div class="project-details" style="display: none;">
+                    <h4>Project Details</h4>
+                    <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
+                        real-time backend powered by Node.js and MongoDB.</p>
                         <h4>Technologies Used:</h4>
                         <ul>
-                            <li><strong>Python</strong> - Core programming language</li>
-                            <li><strong>OpenCV</strong> - Facial recognition and feature extraction</li>
-                            <li><strong>TensorFlow/Keras</strong> - Deep learning models</li>
-                            <li><strong>Flask</strong> - Web application framework</li>
-                            <li><strong>Dlib</strong> - Facial landmark detection</li>
-                            <li><strong>Pandas</strong> - Data analysis and reporting</li>
+                        <!-- Official Brand Icons -->
+                        <span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+                        <span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
                         </ul>
-                    </div>
-                </div>
+                        </div>
+                        
+                                            </div>  
+
             </div>
         </section>
 
