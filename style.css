@@ -30,7 +30,7 @@ body {
 
 .menu button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px #f8f8f8;
 }
 
 /* NEW: Active state for menu buttons */
@@ -105,6 +105,45 @@ body {
 .project-card a:hover {
     background: linear-gradient(145deg, #4CAF50, #6bdb69);
     transform: translateY(-2px);
+}
+  
+.tech-stack {
+    margin: 10px 0;
+}
+
+.tech-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.view-more-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-more-btn:hover {
+    background: #e0e0e0;
+}
+
+.project-details {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.github-link {
+    color: #0366d6;
+    text-decoration: none;
 }
 
 /* Experience Section */
@@ -231,4 +270,134 @@ footer .social-links a {
 footer .social-links a:hover {
     transform: scale(1.1);
     text-decoration: underline;
+}
+
+/* Home Section Styles */
+#home {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #0f0f0f;
+    text-shadow: 0 2px 4px rgba(248, 248, 248, 0.3);
+}
+
+#home h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #e61010;
+    font-weight: 400;
+}
+
+#home img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+}
+
+.home-sections-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.home-section-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+}
+
+.home-section-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    background: rgba(255, 255, 255, 1);
+}
+
+.home-section-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.home-section-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50, #6bdb69);
+    border-radius: 3px;
+}
+
+.home-section-card p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.home-section-card button {
+    background: linear-gradient(145deg, #6bdb69, #4CAF50);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.home-section-card button:hover {
+    background: linear-gradient(145deg, #4CAF50, #6bdb69);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home-sections-overview {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #home h1 {
+        font-size: 2rem;
+    }
+    
+    #home h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-sections-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .home-section-card {
+        padding: 1.2rem;
+    }
+    
+    #home img {
+        width: 150px;
+        height: 150px;
+    }
 }
