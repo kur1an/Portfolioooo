@@ -19,8 +19,13 @@
 <body>
     <nav class="menu">
         <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('about')">About</button>
-        <button onclick="showSection('skills')">Skills</button>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="showSection('about')">About</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('experience')">Experience</a>
+            <a href="#" onclick="showSection('certifications')">Certifications</a>
+        </div>
+    </div>        <button onclick="showSection('skills')">Skills</button>
         <button onclick="showSection('projects')">Projects</button>
         <button onclick="showSection('contact')">Contact</button>
         <button onclick="showSection('hire')">Hire Me</button>
@@ -85,6 +90,45 @@
                 </ul>
                 <div id="experience-details" class="experience-details"></div>
             </div>
+
+            <div class="certifications">
+                <h3>Certifications</h3>
+                <div class="certification-list">
+                    <div class="certification-item">
+                        <i class="fas fa-shield-alt certification-icon"></i>
+                        <div class="certification-details">
+                            <h4>C-DAC, MeitY</h4>
+                            <p>Ethical Hacking and Penetration Testing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item">
+                        <i class="fas fa-search certification-icon"></i>
+                        <div class="certification-details">
+                            <h4>EC-Council</h4>
+                            <p>Digital Forensics Essentials</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item">
+                        <i class="fas fa-cloud certification-icon"></i>
+                        <div class="certification-details">
+                            <h4>NPTEL MOOC</h4>
+                            <p>Google Cloud Computing Foundations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-item">
+                        <i class="fas fa-user-secret certification-icon"></i>
+                        <div class="certification-details">
+                            <h4>Technovalley AKS (Udemy)</h4>
+                            <p>Cyber Security Cadet - Ethical Hacking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
         </section>
 
         <section id="skills" class="section">
@@ -116,7 +160,8 @@
 
             <div class="project-card">
                 <h3>Automatic Live Engagement of Students During Online Meeting </h3>
-                <img src="images/engage.jpg" alt="Student Engagement Detection System" width="100">
+                <h4>Academic Project</h4>
+                <img src="images/engage.png" alt="Student Engagement Detection System" width="100">
                 <p>We are developing a real-time student engagement detection system for virtual classrooms</p>
                 
                 <div class="tech-stack">
@@ -157,7 +202,30 @@
                     </ul>
                 </div>
             </div>
+            <div class="project-card">
+                <h3>Private & Public Bus Timing App</h3>
+                <h4>Academic Project</h4>
+                <img src="images/BusT new.png" alt="Bus Timing App" width="100">
+                <div class="project-links">
+                    <a href="https://github.com/kur1an/bust_mini" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <button class="view-more-btn">View More Details</button>
+                </div>
+                
+                <div class="project-details" style="display: none;">
+                    <h4>Project Details</h4>
+                   <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
+real-time backend powered by Node.js and MongoDB.</p>
+<h4>Technologies Used:</h4>
+<ul>
+<!-- Official Brand Icons -->
+<span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
+<span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
+</ul>
+</div>
 
+                </div>
             <div class="project-cards">
                 <div class="project-card">
                     <h3>Human Facial Recognition System</h3>
@@ -173,8 +241,8 @@
                     <div class="project-details" style="display: none;">
                         <h4>Project Details</h4>
 
-                       <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
-real-time backend powered by Node.js and MongoDB.</p>
+                       <p>Designed a deep learning-based facial recognition system using TensorFlow and PyTorch to enhance identity verification
+                        systems.</p>
 <h4>Technologies Used:</h4>
 <ul>
 <!-- Official Brand Icons -->
@@ -185,29 +253,7 @@ real-time backend powered by Node.js and MongoDB.</p>
 
                     </div>
 
-                <div class="project-card">
-                    <h3>Private & Public Bus Timing App</h3>
-                    <img src="images/bust.jpg" alt="Bus Timing App" width="100">
-                    <div class="project-links">
-                        <a href="https://github.com/kur1an/bust_mini" target="_blank" class="github-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                        <button class="view-more-btn">View More Details</button>
-                    </div>
-                    
-                    <div class="project-details" style="display: none;">
-                        <h4>Project Details</h4>
-                       <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
-real-time backend powered by Node.js and MongoDB.</p>
-<h4>Technologies Used:</h4>
-<ul>
-<!-- Official Brand Icons -->
-<span class="tech-icon" title="JavaScript"><i class="fab fa-js"></i></span>
-<span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
-</ul>
-</div>
 
-                    </div>
 
 
                 <div class="project-card">
@@ -224,8 +270,8 @@ real-time backend powered by Node.js and MongoDB.</p>
                 
                 <div class="project-details" style="display: none;">
                     <h4>Project Details</h4>
-                    <p> Spearheaded the development of BusT, a mobile app streamlining commuting across Kerala with a sleek Flutter UI and a
-                        real-time backend powered by Node.js and MongoDB.</p>
+                    <p> Created a speech-enabled home automation system with a Node.js backend and Arduino microcontroller for remote
+                        device control.</p>
                         <h4>Technologies Used:</h4>
                         <ul>
                         <!-- Official Brand Icons -->
@@ -234,7 +280,7 @@ real-time backend powered by Node.js and MongoDB.</p>
                         </ul>
                         </div>
                         
-                                            </div>  
+     </div>  
 
             </div>
         </section>
@@ -335,6 +381,42 @@ real-time backend powered by Node.js and MongoDB.</p>
                 });
             });
         });
+
+
+function showSection(sectionId) {
+    // Hide all main sections
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // Show selected section
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
+        
+        // Special handling for About section and its subsections
+        if (sectionId === 'about') {
+            document.getElementById('experience').classList.add('active');
+            setTimeout(() => {
+                document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+        }
+    }
+    
+    // Handle subsection navigation
+    if (sectionId === 'experience' || sectionId === 'certifications') {
+        document.getElementById('about').classList.add('active');
+        document.getElementById(sectionId).classList.add('active');
+        
+        // Smooth scroll to the subsection
+        setTimeout(() => {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }, 50);
+    }
+}
     </script>
 
     <footer>
