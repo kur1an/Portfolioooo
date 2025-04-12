@@ -16,7 +16,16 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Script pannalll -->
+
+        <script src="script.js"></script>
+
+
+    <!-- Script pannalll endedddd -->
+
+    
     <nav class="menu">
         <button onclick="showSection('home')">Home</button>
     <div class="dropdown">
@@ -74,23 +83,26 @@
         <section id="about" class="section">
             <h2>About Me</h2>
             <p>I am a Computer Science student with a strong passion for AI, Cyber Security, and innovative project development. With hands-on experience in deep learning, ethical hacking, and application development, I am dedicated to solving real-world problems through technology.</p>
+          
+          
             <div class="experience">
                 <h3>Experience</h3>
-                <ul>
+                <ul class="experience-list">
                     <li onclick="showExperience('skillcraft')">
                         <i class="fa-solid fa-building"></i>
-                        SkillCraft Technology
+                        <span>SkillCraft Technology</span>
                     </li>
                     <li onclick="showExperience('bharatintern')">
-                        Bharat Intern
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span>Bharat Intern</span>
                     </li>
                     <li onclick="showExperience('codeway')">
-                        Codeway Solutions
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>Codeway Solutions</span>
                     </li>
                 </ul>
                 <div id="experience-details" class="experience-details"></div>
             </div>
-
             <div class="certifications">
                 <h3>Certifications</h3>
                 <div class="certification-list">
@@ -199,9 +211,13 @@
 <span class="tech-icon" title="Next.js"><i class="fas fa-forward"></i></span>
 <span class="tech-icon" title="Framer Motion"><i class="fas fa-wave-square"></i></span>
 <span class="tech-icon" title="Uvicorn"><i class="fas fa-server"></i></span>
-                    </ul>
-                </div>
-            </div>
+</ul>
+</div>
+</div>
+
+
+
+
             <div class="project-card">
                 <h3>Private & Public Bus Timing App</h3>
                 <h4>Academic Project</h4>
@@ -224,8 +240,7 @@ real-time backend powered by Node.js and MongoDB.</p>
 <span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
 </ul>
 </div>
-
-                </div>
+</div>
 
 <!---Event Data Web Scraper--------->
 <div class="project-card">
@@ -258,12 +273,10 @@ real-time backend powered by Node.js and MongoDB.</p>
 </ul>
 </div>
 </div>
-</div>
 
 
 
 
-            <div class="project-cards">
                 <div class="project-card">
                     <h3>Human Facial Recognition System</h3>
                     <img src="images/face.jpg" alt="Facial Recognition System" width="100">
@@ -287,19 +300,20 @@ real-time backend powered by Node.js and MongoDB.</p>
 <span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
 </ul>
 </div>
-
-                    </div>
-                </div>
+</div>
 
 
 
-                <div class="project-cards">
                     <div class="project-card">
-                        <h3>Human Facial Recognition System</h3>
-                        <img src="images/face.jpg" alt="Facial Recognition System" width="100">
+                        <h3>Cybersecurity Utilities</h3>
+                        <img src="images/cyber.jpeg" alt="Facial Recognition System" width="100">
                         <p>A deep learning-based facial recognition system using TensorFlow and PyTorch.</p>
+                        <h5>Caesar Cipher Encryption/Decryption</h5>
+                        <h5>Image Encryption Tool - Pixel Manipulation</h5>
+                        <h5>Password Strength Checker</h5>
+
                         <div class="project-links">
-                            <a href="https://github.com/kur1an/Human-Facial-Recognition-System" target="_blank" class="github-link">
+                            <a href="https://github.com/stars/kur1an/lists/skillcraft-technology" target="_blank" class="github-link">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
                             <button class="view-more-btn">View More Details</button>
@@ -307,9 +321,11 @@ real-time backend powered by Node.js and MongoDB.</p>
                         
                         <div class="project-details" style="display: none;">
                             <h4>Project Details</h4>
+                            <p>The Caesar Cipher is one of the simplest and oldest encryption techniques. It's a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.
+                                A tool that encrypts and decrypts images by manipulating their pixels.
+                                A tool that analyzes a given password and provides feedback on how strong or weak.
+                            </p>
     
-                           <p>Designed a deep learning-based facial recognition system using TensorFlow and PyTorch to enhance identity verification
-                            systems.</p>
     <h4>Technologies Used:</h4>
     <ul>
     <!-- Official Brand Icons -->
@@ -317,9 +333,8 @@ real-time backend powered by Node.js and MongoDB.</p>
     <span class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></span>
     </ul>
     </div>
+    </div>
     
-                        </div>
-                    </div>
     
     
 
@@ -428,146 +443,7 @@ real-time backend powered by Node.js and MongoDB.</p>
 
     </main>
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            const homeContent = document.getElementById('home-content');
 
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            if (sectionId === 'home') {
-                document.getElementById('home').classList.add('active');
-                homeContent.innerHTML = '';
-                ['about', 'skills', 'projects', 'contact'].forEach(id => {
-                    const section = document.getElementById(id);
-                    homeContent.innerHTML += section.innerHTML;
-                });
-            } else {
-                document.getElementById(sectionId).classList.add('active');
-            }
-        }
-
-        function showExperience(company) {
-            const details = {
-                skillcraft: {
-                    company: "SkillCraft Technology",
-                    role: "Cyber Security Intern",
-                    date: "June 2024",
-                    description: "Worked on cyber security tools and performed vulnerability assessments."
-                },
-                bharatintern: {
-                    company: "Bharat Intern",
-                    role: "Data Science Intern",
-                    date: "February 2024",
-                    description: "Analyzed datasets and built machine learning models for predictions."
-                },
-                codeway: {
-                    company: "Codeway Solutions",
-                    role: "Android Development Intern",
-                    date: "January 2024",
-                    description: "Developed Android applications with user-friendly interfaces and API integration."
-                }
-            };
-
-            const experience = details[company];
-            const container = document.getElementById('experience-details');
-            container.innerHTML = `
-                <h4>${experience.company}</h4>
-                <p><strong>Role:</strong> ${experience.role}</p>
-                <p><strong>Date:</strong> ${experience.date}</p>
-                <p>${experience.description}</p>
-            `;
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.view-more-btn');
-            
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const details = this.closest('.project-card').querySelector('.project-details');
-                    if (details.style.display === 'none' || details.style.display === '') {
-                        details.style.display = 'block';
-                        this.textContent = 'Show Less';
-                    } else {
-                        details.style.display = 'none';
-                        this.textContent = 'View More Details';
-                    }
-                });
-            });
-        });
-
-
-function showSection(sectionId) {
-    // Hide all main sections
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-    
-    // Show selected section
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        targetSection.classList.add('active');
-        
-        // Special handling for About section and its subsections
-        if (sectionId === 'about') {
-            document.getElementById('experience').classList.add('active');
-            setTimeout(() => {
-                document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 50);
-        }
-    }
-
-
-    
-    document.getElementById('hire-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-        
-        // Using FormSubmit.co for easy form handling
-        fetch('https://formsubmit.co/el/duxeji', {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Message sent successfully!');
-            document.getElementById('hire-form').reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error sending your message.');
-        });
-    });
-
-
-
-    // Handle subsection navigation
-    if (sectionId === 'experience' || sectionId === 'certifications') {
-        document.getElementById('about').classList.add('active');
-        document.getElementById(sectionId).classList.add('active');
-        
-        // Smooth scroll to the subsection
-        setTimeout(() => {
-            document.getElementById(sectionId).scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-        }, 50);
-    }
-}
-    </script>
 
     <footer>
         <p>© 2025 Amith Kurian Joseph. All rights reserved.</p>
@@ -576,5 +452,9 @@ function showSection(sectionId) {
             <a href="https://github.com/kur1an" target="_blank">GitHub</a>
         </div>
     </footer>
+
+
+
 </body>
+
 </html>

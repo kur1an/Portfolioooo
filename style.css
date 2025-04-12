@@ -156,54 +156,118 @@ body {
     text-decoration: none;
 }
 
+
 /* Experience Section */
-.experience ul {
-    padding: 0;
+.experience {
+    margin-top: 2rem;
 }
-.experience ul li i {
-    margin-right: 10px;
-    color: #4CAF50; /* Matching your green theme */
+
+.experience h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.experience h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50, #6bdb69);
+    border-radius: 3px;
+}
+
+.experience-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.experience-list li {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin: 0.8rem 0;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.experience-list li:hover {
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-left-color: #4CAF50;
+}
+
+.experience-list li i {
     font-size: 1.2rem;
-    width: 20px;
+    color: #4CAF50;
+    margin-right: 1rem;
+    width: 24px;
     text-align: center;
 }
 
-.experience ul li {
-    display: flex;
-    align-items: center;
-    /* Keep your existing li styles */
-    list-style: none;
-    margin: 1rem 0;
-    padding: 0.8rem;
-    background: rgba(76, 175, 80, 0.1);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.experience ul li {
-    list-style: none;
-    margin: 1rem 0;
-    padding: 0.8rem;
-    background: rgba(76, 175, 80, 0.1);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.experience-list li span {
+    font-weight: 500;
+    color: #2c3e50;
 }
 
-/* NEW: Hover effect for experience items */
-.experience ul li:hover {
-    background: rgba(76, 175, 80, 0.2);
-    transform: translateY(-2px);
-}
-
-/* NEW: Style experience details */
 .experience-details {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.9);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    animation: fadeIn 0.4s ease-out;
+    border-top: 2px solid #4CAF50;
 }
+
+.experience-details h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.experience-details p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: rgba(76, 175, 80, 0.1);
+    color: #2c3e50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.experience-list li.active {
+    background: rgba(76, 175, 80, 0.2);
+    border-left-color: #4CAF50;
+    font-weight: 500;
+}
+
+
 
 /* NEW: Skills Section Enhancements */
 .skills-item {
