@@ -43,10 +43,33 @@
 
     <main>
         <section id="home" class="section active">
-            <h1>Welcome</h1>
-            <h2>Amith here!!!</h2>
-            <img src="dp.jpg" alt="Profile Picture" width="300">
-            
+            <div class="hero-container">
+                <div class="hero-text">
+                    <div class="welcome-wrapper">
+                        <h1 class="welcome-text">Welcome</h1>
+                        <div class="animated-border"></div>
+                    </div>
+                    <h2 class="name-heading">Amith <span>here!</span></h2>
+                    <p class="hero-tagline">Full-Stack Developer | AI Enthusiast | Cyber Security Specialist</p>
+                    
+                    <div class="expertise-container">
+                        <div class="expertise-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Full-Stack Development</h3>
+                            <p>Building responsive web and mobile applications</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI & ML</h3>
+                            <p>Developing intelligent systems and models</p>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Cyber Security</h3>
+                            <p>Securing systems and ethical hacking</p>
+                        </div>
+                    </div>
+                    
             <div class="home-sections-overview">
 
                 <div class="home-section-card" onclick="showSection('about')">
@@ -302,11 +325,16 @@
         </section>
 
         <section id="projects" class="section">
+
             <h2>Projects</h2>
 
             <div class="project-card">
+                
+                <div class="project-header">
+
                 <h3>Automatic Live Engagement of Students During Online Meeting </h3>
-                <h4>Academic Project</h4>
+                <span class="project-badge">Academic Project</span>
+            </div>
                 <img src="images/engage.png" alt="Student Engagement Detection System" width="100">
                 <p>We are developing a real-time student engagement detection system for virtual classrooms</p>
                 
@@ -353,8 +381,12 @@
 
 
             <div class="project-card">
+                <div class="project-header">
+
                 <h3>Private & Public Bus Timing App</h3>
-                <h4>Academic Project</h4>
+                <span class="project-badge">Academic Project</span>
+            </div>
+
                 <img src="images/BusT new.png" alt="Bus Timing App" width="100">
                 <div class="project-links">
                     <a href="https://github.com/kur1an/bust_mini" target="_blank" class="github-link">
@@ -378,7 +410,11 @@ real-time backend powered by Node.js and MongoDB.</p>
 
 <!---Event Data Web Scraper--------->
 <div class="project-card">
+    <div class="project-header">
+
     <h3>Event Data Web Scraper</h3>
+    </div>
+
 <img src="images/web.jpg" alt="data web scrapper" width="100">
 <p>Developed a web scraper to collect structured event data from top marketing and tech conference websites.
 
@@ -412,7 +448,10 @@ real-time backend powered by Node.js and MongoDB.</p>
 
 
                 <div class="project-card">
+                    <div class="project-header">
+
                     <h3>Human Facial Recognition System</h3>
+                    </div>
                     <img src="images/face.jpg" alt="Facial Recognition System" width="100">
                     <p>A deep learning-based facial recognition system using TensorFlow and PyTorch.</p>
                     <div class="project-links">
@@ -439,7 +478,9 @@ real-time backend powered by Node.js and MongoDB.</p>
 
 
                     <div class="project-card">
+                        <div class="project-header">
                         <h3>Cybersecurity Utilities</h3>
+                        </div>
                         <img src="images/cyber.jpeg" alt="Facial Recognition System" width="100">
                         <p>A deep learning-based facial recognition system using TensorFlow and PyTorch.</p>
                         <h5>Caesar Cipher Encryption/Decryption</h5>
@@ -473,7 +514,10 @@ real-time backend powered by Node.js and MongoDB.</p>
     
 
                 <div class="project-card">
+                    <div class="project-header">
+
                     <h3>Home Automation System</h3>
+                    </div>
                     <img src="images/ardino.jpg" alt="Home Automation System" width="100">
                     <p>An automation system integrating voice control using Arduino and JavaScript.</p>
                
@@ -502,22 +546,57 @@ real-time backend powered by Node.js and MongoDB.</p>
         </section>
 
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-item">
-                <span onclick="window.open('mailto:amith.kurianj@gmail.com', '_blank')">✉</span>
-                <p>Email: amith.kurianj@gmail.com</p>
-            </div>
-            <div class="contact-item">
-                <span onclick="window.open('https://www.linkedin.com/in/amithkurianjoseph/', '_blank')">👤</span>
-                <p>LinkedIn</p>
-            </div>
-            <div class="contact-item">
-                <span onclick="window.open('https://github.com/kur1an', '_blank')">💻</span>
-                <p>GitHub</p>
-            </div>
-            <div class="contact-item">
-                <span>🏠</span>
-                <p>Kozhikode, Kerala, 673573</p>
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Feel free to reach out for collaborations or just to say hello!</p>
+            
+            <div class="contact-container">
+                <!-- Email -->
+                <div class="contact-card" onclick="window.open('mailto:amith.kurianj@gmail.com', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <p>amith.kurianj@gmail.com</p>
+                        <span class="contact-cta">Click to email me</span>
+                    </div>
+                </div>
+        
+                <!-- LinkedIn -->
+                <div class="contact-card" onclick="window.open('https://www.linkedin.com/in/amithkurianjoseph/', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>LinkedIn</h3>
+                        <p>Amith Kurian Joseph</p>
+                        <span class="contact-cta">Connect professionally</span>
+                    </div>
+                </div>
+        
+                <!-- GitHub -->
+                <div class="contact-card" onclick="window.open('https://github.com/kur1an', '_blank')">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <p>@kur1an</p>
+                        <span class="contact-cta">View my projects</span>
+                    </div>
+                </div>
+        
+                <!-- Location -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Location</h3>
+                        <p>Kozhikode, Kerala</p>
+                        <p>673573, India</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -538,7 +617,7 @@ real-time backend powered by Node.js and MongoDB.</p>
                     </div>
                     
                     <div class="hire-card">
-                        <i class="fas fa-consultation"></i>
+                        <i class="fas fa-comments"></i> <!-- Conversation bubbles -->
                         <h3>Consultation</h3>
                         <p>Need expert advice on your project? I offer consultation services for technical architecture and security.</p>
                     </div>
