@@ -99,6 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
+ 
+    
+
     // Handle form submission
     const hireForm = document.getElementById('hire-form');
     if (hireForm) {
