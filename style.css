@@ -7,12 +7,10 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('1.jpg') no-repeat center center fixed;
-    background-size: auto;
+    background: #ffffff;
     color: #333;
     min-height: 100vh;
 }
-
 /* Menu Buttons */
 .menu {
     text-align: center;
@@ -27,7 +25,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    margin: 0.5rem;
+    margin: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -54,8 +52,6 @@ body {
     margin: 1rem auto;
     max-width: 800px;
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .section.active {
@@ -224,8 +220,13 @@ body {
 .experience-list li:hover {
     background: rgba(76, 175, 80, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     border-left-color: #4CAF50;
+}
+
+.experience-list li.active {
+    background: rgba(76, 175, 80, 0.2);
+    border-left-color: #4CAF50;
+    font-weight: 500;
 }
 
 .experience-list li i {
@@ -244,9 +245,8 @@ body {
 .experience-details {
     margin-top: 1.5rem;
     padding: 1.5rem;
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     animation: fadeIn 0.4s ease-out;
     border-top: 2px solid #4CAF50;
 }
@@ -689,8 +689,7 @@ footer .social-links a:hover {
 #home {
     text-align: center;
     padding: 3rem 1rem;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
+    background: #ffffff;
 }
 
 .hero-container {

@@ -10,17 +10,7 @@ function showSection(sectionId) {
     if (targetSection) {
         targetSection.classList.add('active');
 
-        // Special handling for Home section
-        if (sectionId === 'home') {
-            const homeContent = document.getElementById('home-content');
-            homeContent.innerHTML = '';
-            ['about', 'skills', 'projects', 'contact'].forEach(id => {
-                const section = document.getElementById(id);
-                if (section) {
-                    homeContent.innerHTML += section.innerHTML;
-                }
-            });
-        }
+
 
         // Special handling for About section and subsections
         if (sectionId === 'about') {
