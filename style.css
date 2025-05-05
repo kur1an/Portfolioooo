@@ -7,7 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #000000;
     color: #333;
     min-height: 100vh;
 }
@@ -611,7 +611,7 @@ footer .social-links a:hover {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ecebeb;
+    border: 4px solid #000000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     margin-bottom: 2rem;
 }
@@ -625,24 +625,24 @@ footer .social-links a:hover {
 }
 
 .home-section-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     padding: 1.5rem;
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
 }
 
 .home-section-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-    background: rgba(255, 255, 255, 1);
+    background: rgb(255, 255, 255);
 }
 
 .home-section-card h3 {
-    color: #2c3e50;
+    color: #535050;
     margin-bottom: 1rem;
     font-size: 1.3rem;
     position: relative;
@@ -670,7 +670,7 @@ footer .social-links a:hover {
 
 .home-section-card button {
     background: linear-gradient(145deg, #6bdb69, #4CAF50);
-    color: white;
+    color: rgb(233, 228, 228);
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
@@ -689,7 +689,7 @@ footer .social-links a:hover {
 #home {
     text-align: center;
     padding: 3rem 1rem;
-    background: #ffffff;
+    background: #000000;
 }
 
 .hero-container {
@@ -702,12 +702,13 @@ footer .social-links a:hover {
     display: inline-block;
     position: relative;
     margin-bottom: 1.5rem;
+    color: white;
 }
 
 .welcome-text {
     font-size: 3rem;
     margin: 0;
-    color: #2c3e50;
+    color: rgb(236, 14, 14);
     position: relative;
     display: inline-block;
 }
@@ -718,7 +719,7 @@ footer .social-links a:hover {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, #4CAF50, #6bdb69);
+    background: linear-gradient(90deg, #cde5eb, #e4e003);
     border-radius: 2px;
     animation: borderGrow 1.5s ease-out forwards;
 }
@@ -731,7 +732,7 @@ footer .social-links a:hover {
 .name-heading {
     font-size: 2.8rem;
     margin: 0.5rem 0;
-    color: #2c3e50;
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -814,7 +815,7 @@ footer .social-links a:hover {
 }
 
 .expertise-item h3 {
-    color: #2c3e50;
+    color: #4CAF50;
     margin: 1rem 0;
     font-size: 1.3rem;
 }
